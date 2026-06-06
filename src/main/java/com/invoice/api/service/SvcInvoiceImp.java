@@ -58,7 +58,7 @@ public class SvcInvoiceImp implements SvcInvoice {
     }
 
     @Override
-    public Invoice findById(Integer id) {
+    public Invoice findById(String id) {
         try {
             Invoice invoice = repo.findById(id).get();
             if (!jwtDecoder.isAdmin()) {

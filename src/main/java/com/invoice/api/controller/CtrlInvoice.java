@@ -35,7 +35,7 @@ public class CtrlInvoice {
 
 	@GetMapping("/{id}")
 	@Operation(summary = "Consulta de factura", description = "Consulta el detalle de una factura")
-	public ResponseEntity<Invoice> findById(@PathVariable("id") Integer id) {		
+	public ResponseEntity<Invoice> findById(@PathVariable("id") String id) {		
 		return ResponseEntity.ok(svc.findById(id));
 	}
 	

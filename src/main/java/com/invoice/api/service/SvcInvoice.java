@@ -10,5 +10,5 @@ public interface SvcInvoice {
 
 	public List<DtoInvoiceList> findAll();
 	public Invoice findById(Integer id);
-	public ApiResponse create();
+	public ApiResponse create(String token);
 }

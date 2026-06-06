@@ -1,0 +1,20 @@
+package com.invoice.config.openapi;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Configuration
+public class WebClientConfig {
+
+    @Value("${productservice.base.url}")
+    private String productApiUrl;
+
+    @Bean
+    public WebClient productWebClient() {
+        return WebClient.builder()
+                .baseUrl(productApiUrl)
+                .build();
+    }
+}
